@@ -1,0 +1,90 @@
+.footer {
+  background-size: 100%;
+  padding-top: 10rem;
+  position: relative;
+  border-top: 1px solid $color-shine-purple;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10rem;
+    border-bottom: 1px solid $color-shine-purple;
+    &__text {
+      &__name {
+        color: $color-primary-white;
+        padding-bottom: 1rem;
+      }
+
+      &__desc {
+        color: $color-primary-white;
+        width: 35%;
+      }
+    }
+
+    &__other {
+      &__heading {
+        color: $color-primary-white;
+        text-align: center;
+      }
+      &__icons {
+        padding-top: 1rem;
+        color: $color-primary-white;
+        display: flex;
+        gap: 1.2rem;
+      }
+    }
+  }
+}
+
+.copyright {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.copy {
+  text-align: center;
+  color: $color-primary-white;
+}
+
+@media screen and (max-width: 1050px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+
+    &__text {
+      text-align: center;
+
+      &__desc {
+        width: 100%;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &__other {
+      &__heading {
+        text-align: center;
+      }
+
+      &__icons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.footer__icons {
+  color: #fff;
+  cursor: pointer;
+  z-index: 7000;
+  transition: all 0.3s;
+  &:hover {
+    color: $color-shine-purple;
+  }
+}
+
+.logo-img {
+  cursor: pointer;
+}

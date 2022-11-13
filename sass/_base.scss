@@ -1,0 +1,70 @@
+$color-primary-white: #faf9f6;
+$color-headings-black: #faf9f6;
+$color-desc: #888888;
+$color-shine-purple: #6f00ff;
+$color-darker-blue: #002d62;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  font-family: "Raleway", sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.page__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reveal {
+  transition: transform 2s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.lazy-img {
+  filter: blur(20px);
+}
+
+.moving {
+  transform: translateX(5rem);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.styletext {
+  transition: all 0.3s;
+  &:hover {
+    color: blue;
+  }
+}

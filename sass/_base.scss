@@ -32,7 +32,7 @@ body {
   font-weight: 300;
   line-height: 1.1;
   min-height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .page__wrapper {
@@ -67,4 +67,25 @@ body {
   &:hover {
     color: blue;
   }
+}
+
+// html {
+//   scrollbar-width: normal;
+//   scrollbar-color: #777 $color-shine-purple;
+// }
+
+// html::-webkit-scrollbar {
+//   width: 2vw;
+// }
+
+// html::-webkit-scrollbar-thumb {
+//   background-color: red;
+// }
+
+// html::-webkit-scrollbar-track {
+//   background-color: green;
+// }
+
+.link__hidden {
+  display: none;
 }

@@ -147,6 +147,9 @@
   .skills__container {
     grid-template-columns: 1fr 1fr;
   }
+  .skills__container__item {
+    width: 80%;
+  }
 }
 
 .gites {

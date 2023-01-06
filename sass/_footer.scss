@@ -1,5 +1,4 @@
 .footer {
-  background-size: 100%;
   padding-top: 10rem;
   position: relative;
   border-top: 1px solid $color-shine-purple;
@@ -45,6 +44,9 @@
   color: $color-primary-white;
 }
 
+@media screen and (max-width: 500px) {
+}
+
 @media screen and (max-width: 1050px) {
   .footer__container {
     display: grid;
@@ -78,7 +80,7 @@
 .footer__icons {
   color: #fff;
   cursor: pointer;
-  z-index: 7000;
+  z-index: 2000;
   transition: all 0.3s;
   &:hover {
     color: $color-shine-purple;

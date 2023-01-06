@@ -1,17 +1,48 @@
 header {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  height: 102vh;
+  height: 101vh;
   border-bottom: 1px solid $color-shine-purple;
 }
-html {
-  background: url(../img/hihi2.svg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  transform: scale(1);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hihi2.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
+
+// body:before {
+//   // content: "";
+//   // display: block;
+//   // position: fixed;
+//   // left: 0;
+//   // top: 0;
+//   // width: 100%;
+//   // height: 100%;
+//   // z-index: -10;
+//   // background: url(../img/hihi2.svg) no-repeat center center;
+//   // -webkit-background-size: cover;
+//   // -moz-background-size: cover;
+//   // -o-background-size: cover;
+//   // background-size: cover;
+// }
+
 .navigation {
   padding-top: 2.5rem;
   &__container {
@@ -273,6 +304,11 @@ html {
   padding: 1rem;
   margin-right: 15rem;
   position: fixed;
+  box-shadow: inset 0 0 25px #fff, inset 10px 0 40px $color-shine-purple,
+    inset -10px 0 80px $color-darker-blue,
+    inset -10px 0 150px $color-shine-purple,
+    inset -10px 0 150px $color-darker-blue, 0 0 0px #fff,
+    -5px 0 20px $color-shine-purple, 5px 0 40px $color-darker-blue;
   transform: translateX(-50px);
 }
 
@@ -420,11 +456,15 @@ ul li:hover:before {
     z-index: 10000;
     margin-right: 5rem;
   }
+
+  // body:before {
+  //   background-attachment: initial;
+  // }
 }
 
 @media screen and (max-width: 702px) {
   .header__heading {
-    font-size: 20pt;
+    font-size: 25pt;
   }
 
   .header__btn {
@@ -433,15 +473,24 @@ ul li:hover:before {
   .arrow__icon {
     display: none;
   }
-  header {
-    background-image: url(../img/hihi2.svg);
-    background-repeat: no-repeat;
-    background-size: 100vh;
-    background-position: center;
-    height: 100vh;
-  }
 
   ul li:before {
     font-size: 8em;
   }
 }
+
+.navigation__list:hover .navigation__link:not(:hover) {
+  opacity: 0;
+}
+
+.navigation__list:hover .navigation__link {
+  opacity: 1;
+}
+
+// .navigation__list > * {
+//   opacity: 0.4;
+// }
+
+// .navigation__list > *:hover {
+//   opacity: 1;
+// }
